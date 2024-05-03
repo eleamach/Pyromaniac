@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pyromaniac</title>
+        <link rel="icon" type="image/png" href="/public/assets/img/logo.png" />
+        <link rel="stylesheet" href="/public/assets/css/gestion.css"/>
+        <link href="stylesheet.css" rel="/public/assets/font/stylesheet.css" />
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>  
+        <script type="module" src="/public/assets/js/main.js" defer></script>      
+        <script src="/public/assets/js/equipe.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <h2>Equipe</h2>
+            <div class="addsuppr">
+                <div id="equipe">
+                    <div>
+                        <h2>Ajouter equipe</h2>
+                        <form class="addteam">
+                            <label for="teamName"></label>
+                            <input type="string" id="teamName" name="teamName" placeholder="Nom de l'équipe*..." class="login-input" required="required">
+                            <label for="idFireStation"></label>
+                            <input type="int" id="idFireStation" name="idFireStation" placeholder="Id de la caserne*..." class="login-input" required="required">
+                            <button class="loggin-button" type="submit">Ajouter l'équipe</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h2>Supprimer equipe</h2>
+                        <form class="subteam">
+                            <label for="idTeamToDelete"></label>
+                            <input type="number" id="idTeamToDelete" name="idTeamToDelete" placeholder="Id de l'équipe*..." class="login-input" required="required">
+                            <button class="loggin-button" type="submit">Supprimer l'équipe</button>
+                        </form>                
+                    </div>
+                </div>
+                <div id="personnel">
+                    <div>
+                        <h2>Ajouter personnel </h2>
+                        <form class="addPersonTeam">
+                            <label for="idTeamPerson"></label>
+                            <input type="number" id="idTeamPerson" name="idTeamPerson" placeholder="Id de l'équipe*..." class="login-input" required="required">
+                            <label for="employeenumber"></label>
+                            <input type="number" id="employeenumber" name="employeenumber" placeholder="Matricule*..." class="login-input" required="required">
+                            <button class="loggin-button" type="submit">Ajouter à l'équipe</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h2>Supprimer personnel</h2>
+                        <form class="subPersonTeam">
+                            <label for="idTeamPersonToDelete"></label>
+                            <input type="number" id="idTeamPersonToDelete" name="idTeamPersonToDelete" placeholder="Id de l'équipe*..." class="login-input" required="required">
+                            <label for="employeenumberToDelete"></label>
+                            <input type="number" id="employeenumberToDelete" name="employeenumberToDelete" placeholder="Matricule*..." class="login-input" required="required">
+                            <button class="loggin-button" type="submit">Supprimer de l'équipe</button>
+                        </form>                
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="teamContainer">
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>

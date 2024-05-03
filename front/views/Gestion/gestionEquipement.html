@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pyromaniac</title>
+        <link rel="icon" type="image/png" href="/public/assets/img/logo.png" />
+        <link rel="stylesheet" href="/public/assets/css/gestion.css"/>
+        <link href="stylesheet.css" rel="/public/assets/font/stylesheet.css" />
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>  
+        <script type="module" src="/public/assets/js/main.js" defer></script>      
+        <script src="/public/assets/js/equipement.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <h2>Equipement</h2>
+            <div class="addsuppr">
+                <div>
+                    <h2>Ajouter</h2>
+                    <form class="addequi">
+                        <label for="equipementName"></label>
+                        <input type="text" id="equipementName" name="equipementName" placeholder="Nom de l'équipement" class="login-input" required="required">
+                        <label for="capacity"></label>
+                        <input type="number" id="capacity" name="capacity" placeholder="Capacité" class="login-input" required="required">
+                        <label for="levelincident"></label>
+                        <input type="number" id="levelincident" name="levelincident" placeholder="Level de l'incident" class="login-input" required="required">
+                        <button class="loggin-button" type="submit">Ajouter equipement</button>
+                    </form>
+                </div>
+                <div>
+                    <h2>Supprimer</h2>
+                    <form class="subequi">
+                        <label for="equipementNameToDelete"></label>
+                        <input type="text" id="equipementNameToDelete" name="equipementNameToDelete" placeholder="Id de l'equipement" class="login-input" required="required">
+                        <button class="loggin-button" type="submit">Supprimer equipement</button>
+                    </form>                
+                </div>
+            </div>
+            <div class="container" id="equipementContainer">
+            </div>
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>

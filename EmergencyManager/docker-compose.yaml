@@ -1,0 +1,9 @@
+version: '3'
+services:
+  emergency-manager:
+    image: eclipse-temurin:17-jre-alpine
+    container_name: emergency-manager
+    volumes:
+      - ./target/EmergencyManager-1.0-shaded.jar:/app/EmergencyManager.jar
+      - ./src/main/resources/config.xml:/app/config.xml
+    command: java -jar /app/EmergencyManager.jar

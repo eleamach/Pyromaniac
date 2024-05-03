@@ -1,0 +1,158 @@
+!
+hostname BBN-R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+ip source-route
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!         
+!
+no ip domain lookup
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+crypto pki token default removal timeout 0
+!
+!
+!
+redundancy
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!         
+!
+!
+!
+!
+interface Loopback1
+ ip address 192.168.10.1 255.255.255.255
+!
+interface Port-channel13
+ ip address 172.16.13.2 255.255.255.252
+ hold-queue 150 in
+!
+interface Port-channel14
+ ip address 172.16.14.2 255.255.255.252
+ hold-queue 150 in
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ channel-group 14
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ channel-group 14
+!
+interface GigabitEthernet1/0
+ description To_DC-R1-G1/0
+ ip address 172.16.11.1 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ description To_DC-R1-G2/0
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ description To_BBN-R5-G1/0
+ ip address 172.16.15.2 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet4/0
+ description To_BBN-R6-G1/0
+ ip address 172.16.16.2 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet5/0
+ no ip address
+ negotiation auto
+ channel-group 13
+!
+interface GigabitEthernet6/0
+ no ip address
+ negotiation auto
+ channel-group 13
+!
+router ospf 1
+ router-id 192.168.10.1
+ redistribute static subnets
+ passive-interface default
+ no passive-interface GigabitEthernet3/0
+ no passive-interface GigabitEthernet4/0
+ network 172.16.11.0 0.0.0.3 area 0
+ network 172.16.11.16 0.0.0.3 area 0
+ network 172.16.14.0 0.0.0.3 area 0
+ network 172.16.15.0 0.0.0.3 area 0
+ network 172.16.16.0 0.0.0.3 area 0
+ default-information originate
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+ip route 0.0.0.0 0.0.0.0 172.16.11.2
+ip route 0.0.0.0 0.0.0.0 172.16.11.18
+ip route 164.4.1.0 255.255.255.0 172.16.11.2
+ip route 164.4.1.0 255.255.255.0 172.16.11.18
+ip route 164.4.3.0 255.255.255.0 172.16.14.1
+!
+logging esm config
+no cdp log mismatch duplex
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+mgcp profile default
+!
+!         
+!
+gatekeeper
+ shutdown
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login
+ transport input all
+!
+end
+

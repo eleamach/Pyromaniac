@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    background-color: #FEF1E5;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    align-items: center;
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    background-color: #FFD7B2;
+    text-align: center;
+    border-bottom: 3px solid #B52D00;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    align-items: center;
+    font-size: 1.5em;
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-left: 15px;
+}
+
+hr {
+    border: 1px solid #B52D00;
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #B52D00;
+}
+
+#simu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#map_container{
+    height:  750px;
+    width:  80%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.form-simu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.debug-panel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px;
+}
+.log-debug {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.panel {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-weight: bold; /* Texte en gras */
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    display: block; /* Place le label sur une ligne séparée */
+    margin-bottom: 5px; /* Marge en bas pour espacement */
+    color: #333; /* Couleur du texte */
+}
+
+select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+h1{
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    text-align: center;
+}
+
+button[disabled] {
+    cursor: not-allowed;
+    background-color: gray;
+
+}
+
+h2{
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    text-align: center;
+    margin: 50px;
+}
+
+.parag{
+    font-size: 1.2em;
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    color: #000000;
+    text-align: center;
+    margin: 100px;
+}
+
+#toaster {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.toaster-message {
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toaster-message.error {
+    background-color: #e74c3c;
+}
+
+.toaster-message.warning {
+    background-color: #f39c12;
+}
+
+.toaster-message.info {
+    background-color: #4caf50; /* Vert */
+}

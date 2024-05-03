@@ -1,0 +1,53 @@
+{
+    "firestation":[
+        {
+            "name": "firestation1",
+            "coord": {
+                "long": 4.878317,
+                "lat": 45.778784
+            }  
+        },
+        {
+            "name": "firestation2",
+            "coord": {
+                "long": 4.9051717,
+                "lat": 45.7657069
+            }  
+        },
+        {
+            "name": "firestation3",
+            "coord": {
+                "long": 4.8439261,
+                "lat": 45.7627835
+            }  
+        },
+        {
+            "name": "firestation4",
+            "coord": {
+                "long": 4.8480699,
+                "lat": 45.7500822
+            }  
+        },
+        {
+            "name": "firestation5",
+            "coord": {
+                "long": 4.8284384,
+                "lat": 45.7316551
+            }  
+        },
+        {
+            "name": "firestation6",
+            "coord": {
+                "long": 4.8258056,
+                "lat": 45.7468624
+            }  
+        },
+        {
+            "name": "firestation7",
+            "coord": {
+                "long": 4.8210309,
+                "lat": 45.7838488
+            }  
+        }
+    ]
+}

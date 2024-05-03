@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pyromaniac</title>
+        <link rel="icon" type="image/png" href="/public/assets/img/logo.png" />
+        <link rel="stylesheet" href="/public/assets/css/gestion.css"/>
+        <link href="stylesheet.css" rel="/public/assets/font/stylesheet.css" />
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>  
+        <script type="module" src="/public/assets/js/main.js" defer></script>      
+        <script src="/public/assets/js/caserne.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <h2>Caserne</h2>
+            <div class="addsuppr">
+                <div>
+                    <h2>Ajouter</h2>
+                    <form id="add-caserne">
+                        <label for="siteName"></label>
+                        <input type="text" id="siteName" name="siteName" placeholder="Nom" class="login-input" required="required">
+                        <label for="siteX"></label>
+                        <input type="number" id="siteX" name="siteX" placeholder="Coordonnée X" class="login-input" required="required">
+                        <label for="siteY"></label>
+                        <input type="number" id="siteY" name="siteY" placeholder="Coordonnée Y" class="login-input" required="required">
+                        <button class="loggin-button" type="submit">Ajouter Site</button>
+                    </form>
+                </div>
+                <div>
+                    <h2>Supprimer</h2>
+                    <form id="sitesuppr">
+                        <label for="siteNameToDelete"></label>
+                        <input type="text" id="siteNameToDelete" name="siteNameToDelete" placeholder="Nom" class="login-input" required="required">
+                        <button class="loggin-button" type="submit">Supprimer Site</button>
+                    </form>                
+                </div>
+            </div>
+            <div class="container" id="sitesContainer">
+            </div>
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>

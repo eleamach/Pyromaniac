@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyromaniac</title>
+    <link rel="icon" type="image/png" href="/public/assets/img/logo.png" />
+    <link rel="stylesheet" href="/public/assets/css/maps.css"/>
+    <script type="module" src="/public/assets/js/main.js" defer></script>
+    
+    <!-- Inclure la bibliothèque Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="panel">
+        <div class="form-simu">
+            <div class="flex-row">
+                <div class="form-group">
+                    <label for="meteo">Météo :</label>
+                    <select name="meteo" id="meteo" disabled>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="difficulte">Difficulté :</label>
+                    <select name="difficulte" id="difficulte" disabled>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="vitesse">Vitesse :</label>
+                    <select name="vitesse" id="vitesse" >
+                        <option value="0">Lente</option>
+                        <option value="1" selected >Modérée</option>
+                        <option value="2">Rapide</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="flex-row">
+                <button type="button" id="start-simu-button">Start</button>
+                <button type="button" id="stop-simu-button" style="display: none;">Stop</button>
+                <button type="button" id="find-simu-button" >Charger</button>
+            </div>
+        </div>
+
+        <div class="debug-panel">
+            <div class="flex-row">
+                <p>Debug panel</p>
+            </div>
+            
+            <div class="flex-row">
+                <button type="button" id="debug-on-simu-button">Debug</button>
+                <button type="button" id="debug-off-simu-button" style="display: none;">Debug</button>
+                <button type="button" id="stop-interval-button" >StopInterval</button>
+            </div>
+        </div>
+    </div>
+    <div id="simu">
+        <div id="map_container">
+            <div id="map"></div>    
+        </div>
+        <div class="log-debug">
+            <h3>Log:</h3>
+        </div>
+    </div>   
+    <div id="footer"></div>
+</body>

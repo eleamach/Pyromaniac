@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Définir la taille de la carte */
+#map {
+    width: 750px;
+    height: 750px;
+}
+
+/* Style pour afficher les coordonnées */
+.grid-label {
+    position: absolute;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.marker {
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+}

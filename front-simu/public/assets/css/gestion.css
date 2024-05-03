@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #FEF1E5;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    align-items: center;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    background-color: #FFD7B2;
+    text-align: center;
+    border-bottom: 3px solid #B52D00;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    align-items: center;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    text-align: center;
+    
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-left: 15px;
+}
+
+hr {
+    border: 1px solid #B52D00;
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #B52D00;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+h1{
+    font-size: 4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    text-align: center;
+}
+
+h2{
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #B52D00;
+    text-align: center;
+    margin: 50px;
+}
+
+h3{
+    font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin: 50px;
+}
+
+.parag{
+    font-size: 1.2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    text-align: center;
+    margin: 100px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFA967;
+    text-align: center;
+    border-bottom: 3px solid #B52D00;
+}
+
+#titlenav {
+    font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin: 10px;
+    transition: background-color 0.3s, margin 0.3s, border-radius 0.3s; 
+}
+
+#titlenav:hover {
+    background-color: #ffd7ca;
+    padding: 1px;
+    margin: 10px; 
+    border-radius: 10px; 
+}
+
+.nav2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;       
+    gap: 10px;                      
+    justify-content: center;       
+    align-items: center;           
+    margin-bottom: 50px;
+}
+
+.ajoutsuppr {
+    display: grid;
+    grid-template-columns: auto; 
+    align-items: center;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px; 
+}
+
+.login-input {
+    margin-bottom: 10px;
+}
+
+.loggin-button {
+    background-color: #FFA967;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.loggin-button:hover {
+    background-color: #B52D00;
+}
+
+input, select{
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.site {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.addsuppr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.site {
+    background-color: #FFA967;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+#login {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#login input {
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#login input[type="submit"] {
+    background-color: #FFA967;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.personnel {
+    background-color: #FFA967;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.equipement {
+    background-color: #FFA967;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+select:required:invalid {
+    color: gray;
+  }
+
+  .login-input, #formed {
+    width: 200px; 
+}
+
+.team {
+    background-color: #FFA967;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#equipe > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#personnel > div {
+    display: inline-block;
+    margin-right: 20px; 
+}

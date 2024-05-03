@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pyromaniac</title>
+        <link rel="icon" type="image/png" href="/public/assets/img/logo.png" />
+        <link rel="stylesheet" href="/public/assets/css/gestion.css"/>
+        <link href="stylesheet.css" rel="/public/assets/font/stylesheet.css" />
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>  
+        <script type="module" src="/public/assets/js/main.js" defer></script>      
+        <script src="/public/assets/js/personnel.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <h2>Personnel</h2>
+        <main>
+            <div class="nav2">
+                <div class="addsuppr">
+                    <div>
+                        <h2>Ajouter</h2>
+                        <form class="add-personnel">
+                            <label class="add-firstname" for="firstname"></label>
+                            <input name="firstname" type="text" id="firstname" class="login-input" placeholder="Prénom*..." required="required">
+                            <label class="add-lastname" for="lastname"></label>
+                            <input name="lastname" type="text" id="lastname" class="login-input" placeholder="Nom*..." required="required">
+                            <label class="add-matricule" for="matricule"></label>
+                            <input name="matricule" type="text" id="matricule" class="login-input" placeholder="Matricule*..." required="required">
+                            <label class="add-age" for="age"></label>
+                            <input name="age" type="text" id="age" class="login-input" placeholder="Age*..." required="required">
+                            <select name="formed" id="formed" class="login-input" required="required" >
+                                <option value="" disabled selected hidden>Formé sur*...</option>
+                            </select>
+                            <label class="add-password" for="password"></label>
+                            <input name="password" type="password" id="password" class="login-input" placeholder="Mot de passe*..." required="required">
+                            <button class="loggin-button" type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h2>Supprimer</h2>
+                        <form class="sub-personnel" method="post">
+                            <label class="sub-matricule" for="matricule"></label>
+                            <input name="matricule" type="text" id="matricule" class="login-input" placeholder="Matricule*..." required="required">
+                            <button class="loggin-button" type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="container" id="affichagePersonnel">
+                </div>
+            </div>
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>
